@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here _________   this file is called spring container-->
+    
+    <!-- id : name of the object creations -->
+   
+ 	<bean id="myCoach" class="firstIOC.Baseball">	
+ 	
+ 	<constructor-arg ref="fortune"/>
+ 		
+ 		
+ 	</bean>
+ 	
+ 	
+ 	<bean id="fortune" class ="firstIOC.fortune"></bean>
+ 	
+ 	<bean id="mycricket" class ="firstIOC.cricketCouch">
+ 	<constructor-arg ref="fortune"/>
+ 	</bean>
+ 	
+ 	<bean id="sc" class ="firstIOC.spell"></bean>
+ 	
+ 	<bean id="te" class ="firstIOC.texteditor">
+ 	<constructor-arg ref="sc"/>
+ 	</bean>
+    
+</beans>
