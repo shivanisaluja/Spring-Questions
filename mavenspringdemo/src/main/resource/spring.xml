@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+ <bean id="employ" class="com.ncu.typeques.Employee" autowire="byType">
+ <property name="emp_name" value="Shivani"/>
+ <property name="add" ref="address"/>
+ </bean>
+ 
+ <bean id="address" class="com.ncu.typeques.Address">
+<property name="city" value="Gurugram"/>
+<property name="house_no" value="387"/>
+<property name="state" value="Haryana"/>
+<property name="pincode" value="122001"/>
+</bean>
+    
+<bean id="dname" class="com.ncu.typeques.Department" >
+<property name="name">
+<list>
+<value>"cse"</value>
+</list>
+</property>
+</bean>
+
+</beans>
