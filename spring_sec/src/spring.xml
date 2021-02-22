@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	
+    <!-- Define your beans here _________   this file is called spring container-->
+    
+    <!-- id : name of the object creations -->
+   
+ 	<bean id="base" class="sec_IOC.Baseball">	
+ 	<property name="fortune9" ref="fortune1" /></bean>
+ 	
+	 <bean id="fortune1" class ="sec_IOC.fortune9"></bean>
+	 	
+	  <bean id="baseball" class ="sec_IOC.Baseball">
+	  <constructor-arg name="name" value="shivani" />
+	  	 <constructor-arg name="team" value="23" />
+	  	  <constructor-arg name="age" value="20" />
+	 
+	  </bean>
+ 	
+    
+</beans>
