@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+    xmlns:aop="http://www.springframework.org/schema/aop"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd   
+    http://www.springframework.org/schema/aop   
+    http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">  
+  
+  <aop:aspectj-autoproxy>
+  
+  </aop:aspectj-autoproxy>
+  
+  <bean name="tri" class="Basic_First.model.triangle">
+  <property name="name" value= "triangle name"></property>
+   </bean>
+   
+    <bean name="cir" class="Basic_First.model.circle">
+  <property name="name" value= "circle name"></property>
+   </bean>
+   
+   
+    <bean name="shapeser" class="Basic_First.service.ShapeService" autowire="byName">
+ 
+     </bean>
+     
+     <bean name="LoggingAspect" class="Basic_First.aspect.LoggingAspect"></bean>
+</beans> 
