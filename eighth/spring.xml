@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+<!-- For eighth -->
+    
+    <bean id="customer" class="eighth.Customer">
+    <property name="names">
+    <list>
+    <value>gb</value>
+    <value>hs</value>
+    <value>pk</value>
+    </list>
+    </property>
+    
+    <property name="Phno">
+    <set>
+    <value>35452354</value>
+    <value>23452435</value>
+    <value>56643546</value>
+    </set>
+    </property>
+    
+    <property name="aadharNo">
+ 	<map> 
+	<entry key="35452354" value="gb"/>
+ 	<entry key="23452435" value="hs"/>
+ 	<entry key="56643546" value="pk"/>
+	</map> 
+	</property> 
+	
+	<property name="email">
+ 	<props> 
+	<prop key="35452354" >gb@gmail.com</prop>
+ 	<prop key="23452435" >hs@gmail.com</prop>
+ 	<prop key="56643546" >pk@gmail.com</prop>
+	</props> 
+	</property> 
+  
+    <property name="address">
+ 	<map> 
+	<entry key="35452354" value-ref="address"/>
+	</map> 
+	</property>     
+    </bean>	
+  
+  	<bean id="address" class="eighth.Address">
+  	<property name="city" value="Gurgaon"/>
+  	<property name="house_no" value="153"/>
+  	<property name="state" value="Haryana"/>
+  	<property name="pincode" value="122001"/>
+  	</bean>
+    </beans>
