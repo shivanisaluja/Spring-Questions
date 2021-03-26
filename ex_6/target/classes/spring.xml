@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	    
+    
+       <bean class = "loan_1.Source" name = "sourcing">
+       <property name="fullName" value="shivu"/>
+       <property name = "age" value = "19"/>
+       <property name="address" value = "gwalior"></property>
+       <property name = "phoneNum" value = "7000600032"></property>
+       <property name = "email" value ="shivu@yahoo.com"></property>
+       <property name = "loanType" value = "Home"></property>
+       </bean>
+       
+       
+       <bean class = "loan_1.NewLoan" name = "newLoan" autowire = "byName"></bean>
+          
+          
+            <!--
+           
+       
+       
+       <bean class = "loan_1.Data" name = "de">
+       <property name="income" value="10000"/>
+       <property name="assets" value="1000"/>
+       <property name="liability" value="100"/>
+       <property name="education" value="undergrad"/>
+       <property name="adhar" value="20001200120"/>
+       <property name="pan" value="12001211"/>
+       </bean>
+      
+     
+ 		 -->
+     
+        <bean class = "loan_1.Data" name = "de">
+       <property name="income" value="10000"/>
+       <property name="assets" value="1000"/>
+       <property name="liability" value="100"/>
+       <property name="education" value="undergrad"/>
+       <property name="adhar" value="200012001200"/>
+       <property name="pan" value="abcde1243d"/>
+       </bean>
+       
+       
+       
+       
+       <bean class = "loan_1.address" name = "add">
+       <property name="H_No" value="123"/>
+       <property name="city" value="gurgaon"/>
+       </bean>
+        
+      
+       <bean class = "loan_1.scoring" name = "score"/>
+      
+       
+       
+       <!-- 
+        <bean class = "loan_1.address" name = "add">
+       <property name="H_No" value="123"/>
+       <property name="city" value="gurgaon"/>
+       </bean>
+    
+     -->
+   
+   
+</beans>
