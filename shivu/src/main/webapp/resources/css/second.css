@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgba(255, 99, 71, 0.5);
+    color: black;
+}
+
+h2 {
+    color: yellow;
+    text-align: right;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+    color: black;
+}
